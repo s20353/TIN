@@ -1,0 +1,29 @@
+h1
+{
+  font-family: verdana;
+  font-size: 50px;
+  color: green;
+  text-align: center;
+}
+
+p
+{
+  font-family: verdana;
+  font-size: 30px;
+}
+
+table, th, td
+{
+  border: 2px solid red;
+  border-collapse: collapse;
+}
+
+a:link
+{
+  text-decoration: none;
+}
+
+ul
+{
+  list-style-type: square;
+}
