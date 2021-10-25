@@ -1,0 +1,117 @@
+	html
+	{
+		font-family: sans-serif;
+    }
+	  
+    body
+	{
+		margin: 0;
+	}
+	  
+	header
+	{
+		justify-content: center;
+	}
+	  
+	h1
+	{
+		text-align: center;
+		margin: 50px;
+	}
+
+	article
+	{
+		justify-content: center;
+        padding: 10px;
+        margin: 10px;
+        column-count: 5;
+        column-width: 200px;
+	}
+	  
+	img.rounded-corners
+	{
+		max-width: auto;
+        border-radius: 40px;
+        transform: rotate(5deg);
+        box-shadow: 10px 10px 10px 0 rgba(88, 88, 88, 0.5);
+        height: 150px;
+        width: 250px;
+	}
+	  
+	section
+	{
+        display: grid;
+        grid-template-columns: [first]250px [line2]auto;
+        grid-template-rows:auto;
+	}
+	  
+	article.gallery
+	{
+        grid-area: 1 / first / line2
+        padding: 10px;
+        margin: 10px;
+        vertical-align: top;
+        display: inline-block;
+        text-align: left;
+	}
+	  
+	@media screen and (max-width: 800px)
+	{
+        section
+		{
+         display: grid;
+         grid-template-columns: [first]auto [endcol];
+         grid-template-rows:[row1]auto [row2]auto [end];
+        }
+
+        article
+		{
+        grid-area: row1 / first/ row2 / endcol;
+        column-count:1;
+        }
+		
+        article.gallery
+		{
+			grid-area:   row2 / first / end / endcol;
+        }
+	}
+	  
+	img.gal
+	{
+        height: 200px;
+        width: 200px;
+	}
+	  
+	img.a
+	{
+        float: right;
+        height: 80px;
+        wight: 80px;
+        padding: 10px;
+        margin: 10px;
+	}
+	.caption
+	{
+        display: block;
+	}
+	.footer
+	{
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+	}
+	.pquote
+	{
+    float: left;
+    width: 100px;
+    color: red;
+    font-weight: bold;
+    padding: 0px;
+    margin: 0 10px 10px 0;
+	}
+
+	blockquote
+	{
+		margin: 0;
+	}
