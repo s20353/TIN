@@ -1,11 +1,9 @@
-function Student(firstName, lastName, id, grades)
-{
+function Student(firstName, lastName, id, grades) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.id = id;
     this.grades = grades;
-    this.printInfo = function ()
-    {
+    this.printInfo = function () {
         console.log(this.fullName + ' ' + this.averageGrade);
     }
 }
@@ -13,8 +11,11 @@ function Student(firstName, lastName, id, grades)
 Object.defineProperties(Student.prototype, {
     fullName:
     {
-        get: function ()
-        {
+        set: function () {
+            [this.firstname, this.lastName] = fullname.split(" ");
+        },
+
+        get: function () {
             return this.firstName + ' ' + this.lastName;
         }
 
@@ -22,11 +23,9 @@ Object.defineProperties(Student.prototype, {
 
     averageGrade:
     {
-        get: function ()
-        {
+        get: function () {
             let sum = 0;
-            for (let i = 0; i < this.grades.length; ++i)
-            {
+            for (let i = 0; i < this.grades.length; ++i) {
                 sum += this.grades[i];
             }
             return sum / this.grades.length;
